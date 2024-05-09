@@ -1,0 +1,139 @@
+*{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+/*6、设置页眉区域的样式:区域的宽度为相对网页窗口宽度一致(使用百分比)；合适的高度；
+	合适的背景颜色；合适粗细、单实线、合适颜色的下边框；
+*/
+header{
+	width: 100%;
+	height: 50px;
+	background-color: azure;
+	border-bottom: 2px solid #288;
+}
+
+/*7、设置页眉区域左边图片的样式:图片合适的宽度；高度与页眉区域相同(使用百分比)；
+     合适宽度的左外边距；左浮动
+*/
+header img{
+	width: 60px;
+	height: 100%;
+	margin-left: 20px;
+	float: left;
+}
+
+/*8、设置页眉区域右边无序列表的样式:高度与页眉区域相同；
+     合适宽度的右外边距；右浮动
+*/
+header ul{
+	height: 50px;
+	margin-right: 20px;
+	float: right;
+}
+
+
+/*9、设置页眉区域右边无序列表列表项的样式:合适的宽度和高度；文字水平居中对齐；
+     文字字体(加粗 合适大小 楷体)；文字合适颜色；左浮动;行高与高度相同；
+*/
+header li{
+	width: 80px;
+	height: 40px;
+	text-align: center;
+	font: bold 19px "楷体";
+	color: black;
+	float: left;
+	line-height: 40px;
+}
+
+
+/*10、设置页眉区域右边无序列表列表项鼠标悬停的样式:合适的背景颜色；
+     合适的文字颜色；合适粗细、单实线、合适颜色的下边框
+ */
+header li:hover{
+	background-color: cornsilk;
+	color: darkblue;
+	border-bottom: 2px solid #488;
+}
+
+
+/*11、设置用户区域的样式:合适的宽度和高度；合适粗细、单实线、深灰色的边框；
+合适深灰色的盒阴影；上下合适距离、左右居中的外边距
+相对定位；
+*/
+#userarea{
+	width: 900px;
+	height: 1000px;
+	border: 2px solid darkgrey;
+	box-shadow:0px 0px 7px darkgrey;
+	margin: 20px auto;
+     position: relative;
+}
+
+
+/*12、设置用户区域的两个子区域(登录区域和注册区域)的样式:
+  区域宽度相对用户区域的合适百分比；合适的高度；与页眉区域相同的背景颜色；
+  上下合适距离、左右合适距离的外边距；绝对定位；
+*/
+#login,#regist{
+	width: 40%;
+	height: 600px;
+	background-color: azure;
+	margin: 8px 8px;
+	position: absolute;
+}
+
+
+/*13、设置所有label元素的样式:区域宽度与父元素一致(使用百分比)；合适的高度；
+    上下合适距离、左右合适距离的外边距；右浮动；
+    文字右对齐；文字字体(加粗 合适大小 楷体)；；
+*/
+label{
+	width: 100%;
+	height: 40px;
+	margin: 5px 5px 4px 4px;
+	float: right;
+	text-align: right;
+	font: bold 20px "楷体";
+}
+
+
+/*14、设置所有input元素的样式:区域宽度相对父元素合适百分比；
+    高度与父元素相同；文字字体( 合适大小 楷体)；    ；
+*/
+input{
+	width: 76%;
+	height: 100%;
+	font:bold 17px "楷体";
+}
+/*15、设置所有按钮的样式:区域宽度相对父元素宽度一致(使用百分比)；合适高度
+     上下合适距离、左右距离为零的外边距；合适的背景颜色；
+	 合适的文字颜色；文字字体( 合适大小 加粗 楷体)；    ；
+*/
+.button{
+	width: 100%;
+     height: 80px;
+	margin: 5px 0px;
+	background-color: bisque;
+	color: #178;
+	font:bold  17px  "楷体";
+}
+
+/*16、设置label元素中的div子区域的样式:合适的区域宽度和高度；
+     显示类型为行内块元素；合适的背景颜色；文字字体( 合适大小 加粗 楷体)；
+	 合适宽度的字符间距； 行高与高度相同；
+*/
+label div{
+     width: 200px;
+     height: 50px;
+     display: inblock;
+     background-color: blanchedalmond;
+     font:18px bold "楷体";
+     letter-spacing: 10px;
+     line-height: 300px;
+}
+footer{
+	font: 20px bold 仿宋;				
+	color: chocolate;
+	text-align: center;
+}

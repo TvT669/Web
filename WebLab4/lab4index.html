@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>珠宝商城</title>
+		<style type="text/css">
+	
+    *{
+				padding: 0;
+				margin: 0;
+			}
+			/*6、设置整个页面区域的样式（添加背景图像(资源中bgpic开头的图片文件)、
+			让背景图像单张覆盖整个页面） */
+            body {
+               background-image:url(/WebLab4/images/bgpic01.jpg);
+                background-size: cover;
+            }
+			/*7、设置页眉区域的样式（区域的宽度与网页窗口一致、合适的区域高度、
+			该区域固定定位在窗口顶部不随窗口滚动条的滚动而滚动
+			并通过设置合适的边偏移属性该区域顶部和左部的边与窗口重合) */
+            header{
+                width:100% ;
+                height: 180px;
+                position: fixed;
+				top:0;
+				left: 0;
+                float: left;  
+            }
+			/*8、设置页眉区域中段落的样式（文字颜色、文字水平居中、文字字体(粗细 大小 字体)、
+			文字添加阴影(颜色 )、文字垂直方向在页眉区域的中部） */
+            header p{
+                height:180px;
+                width: 100%;
+                color: crimson;
+                text-align: center;
+                font: bold 80px 楷体;
+                text-shadow: #565152;
+                line-height: 180px;
+            }
+			
+			/*9、设置页眉区域中视频的样式（视频的宽度与页眉区域一致、视频的高度与页眉区域一致、
+	KI9		通过“object-fit: cover;”设置视频窗口充满整个页眉区域，通过绝对定位使视频和标题文字层叠，
+			并并通过设置合适的边偏移属性使元素顶部和左部的边与父元素页眉区域重合，
+			通过层级属性设置视频层叠在标题文字的下方。 */
+            header video{
+                width:100% ;
+                height: 180px;
+                object-fit: cover;
+                position: absolute;
+				top:0;
+				left: 0;
+                z-index: -1;
+
+            }
+
+			
+			/*10、设置导航区域的样式（导航区域的宽度与页面窗口宽度一致、合适的区域高度、
+			合适的背景颜色） */
+            nav {
+           width: 100%;
+		   height: 50px;
+		   background-color: #5ea5a4;
+           margin-top: 180px;
+        }
+
+
+			/*11、设置导航区域列表项的样式（列表项的宽度（使用百分比）、列表项高度、列表项文字水平居中、
+			设置浮动定位让列表项横向排列设置、去掉列表项的项目符号(list-style属性设置为none）） */
+			nav ul li{
+				width:20%;
+				height: 50px;
+				text-align: center;
+				float: left;
+				list-style:none ;
+			}
+	
+
+
+			/*12、设置导航区域列表项超链接的样式（文字颜色、文字字体(粗细 大小 字体)、
+			显示类型改为块元素或行内块元素、去掉下划线、文字在导航区域垂直方向居中） */
+			nav a{
+				height: 50px;
+				color: black;
+				font: bold 30px 楷体;
+				display: block; 
+				text-decoration: none;
+				line-height: 50px;
+			}
+
+
+			/*13、设置导航区域列表项超链接鼠标悬停时(a:hover)的样式（文字颜色和背景颜色改变、文字字体大小增大、
+			增加下边框(粗细、线型 颜色)） */
+			nav a:hover{
+				color: aqua;
+				background-color: lightblue;
+				font-size: 50px;
+				border-bottom:2px solid gray  ;
+			}
+			/*14、设置表格的样式（合适的表格宽度（使用百分比）、表格在窗口水平居中且距离上下元素一定距离（至少20px）、单元格边框合并、
+			   设置上、下相同的边框(粗细、线型 颜色)） */
+			   table{
+				width: 100%;
+				margin: 20px auto;
+				border-collapse: collapse;
+				border-bottom:2px solid gray  ;
+				border-top:2px solid gray  ;
+			   }
+			/*15、设置表格标题的样式（合适的文字颜色、文字字体(粗细 大小 字体)、
+			合适的高度、行内垂直方向居中） */
+			table caption{
+				color: #5ea5a4;
+				font: bold 10px "楷体";
+				height: 40px;
+				line-height: 40px;
+			
+			}
+			tr{
+				height: 50px;
+			}
+			img{
+				height: 40px;
+			}
+			img:hover{
+				transform: scale(1.5,1.5);
+			}
+			 /*16、设置表头行单元格的样式（文字颜色、下边框与表格的上或下边框相同(粗细、线型 颜色)、背景色）*/
+			th{
+				color: beige;
+				border-bottom: 2px solid gray ;
+				background-color: darkolivegreen;
+			}
+
+			/*17、设置所有数据行单元格的样式(文字居中显示、下边框(粗细、线型 颜色)、文字颜色)*/
+			td{
+				text-align: center;
+				border-bottom:2px dotted rebeccapurple  ;
+				color: darkorchid;
+
+			}
+
+			/*18、单独设置奇数行的背景颜色*/
+			tr:nth-child(odd){
+				background-color: aquamarine;
+			}
+
+			/*19、单独设置偶数行的与奇数行不同的背景颜色*/
+            tr:nth-child(even){
+				background-color:pink;
+			}
+
+
+		/*20、设置页脚区域段落的样式(文字水平居中、文字字体(粗细 大小 字体)、合适的文字颜色)*/
+		footer p{
+			text-align: center;
+			font: bold 30px 楷体;
+            color: crimson;
+		}
+			
+		</style>
+	<head>
+		<meta charset="utf-8">
+		<title>珠宝商城</title>
+		<link rel="stylesheet" href="/css/css3.css">
+	</head>
+	<body>
+		<!-- 备注：网页中使用的所有资源都在“WebLab4/images”路径下 -->
+		<header>
+			<!-- 1、在网页的页眉区域创建内容为“闪耀珠宝购物天地”文字的段落，描述网页页面主题 -->
+			<!-- 2、在网页的页眉区域创建视频文件为“myvideo.mp4”的视频，且设置视频静音、循环、自动播放 -->
+			<p>闪耀珠宝购物天地</p>
+            <video  autoplay muted>
+                <source src="/WebLab4/images/myvideo.mp4" type="video/mp4">
+            </video>
+
+		</header>
+		<nav>
+			<!-- 3、在网页的主体区域创建一个无序列表，每个列表项都为一个虚拟超链接，列表项的个数
+			可自由设计但至少4项，其中有一个列表项的文字为“销量排行榜”，其他列表项文字可以自由发挥
+			 -->
+			<ul >
+                <li><a href="#">首页</a></li> 
+                <li><a href="#">销量排行榜</a></li>
+                <li><a href="#">网购天地</a></li>
+                <li><a href="#">活动</a></li>
+                <li><a href="#">......</a></li>
+            </ul>
+
+
+
+		</nav>
+		<main>
+			<!--4、在网页的主体区域创建一个表格，表格标题为“畅销珠宝商品销量排行榜”，表格头行描述表格
+			各属性列的名称（“商品图”、“商品编号”、“商品名称”、“商品售价”和“商品销售量”），
+			表格数据行描述各商品信息（至少要4样商品，根据图片素材中商品图片，自由选择要显示的商品，要求
+			商品的编号和商品名称分别为图片文件名中空格前的内容和后面的内容）
+			 -->
+             <table>
+                <caption>畅销珠宝商品销量排行榜</caption>
+                    <tr>
+                        <th>商品图</th>
+                        <th>商品编号</th>
+                        <th>商品名称</th>
+                        <th>商品售价</th>
+                        <th>商品销售量</th>
+                    </tr>
+                    <tr>
+                        <td><img src="/WebLab4/images/R10001 天使之恋.jpg" alt=""></td>
+                        <td>R10001</td>
+                        <td>天使之恋</td>
+                        <td>3366</td>
+                        <td>1000</td>
+                    </tr>
+                    <tr>
+                        <td><img src="/WebLab4/images/R10004 璀璨年华.jpg" alt=""></td>
+                        <td>R10004</td>
+                        <td>璀璨年华</td>
+                        <td>3333</td>
+                        <td>950</td>
+                    </tr>
+                    <tr>
+                        <td><img src=/"WebLab4/images/B10002 梦幻时分.jpg" alt=""></td>
+                        <td>B10002</td>
+                        <td>梦幻时分</td>
+                        <td>6999</td>
+                        <td>900</td>
+                    </tr>
+                    <tr>
+                        <td><img src="/WebLab4/images/N10001 天使之翼.jpg" alt=""></td>
+                        <td>N10001</td>
+                        <td>天使之翼</td>
+                        <td>8988</td>
+                        <td>880/th>
+                    </tr>
+                    <tr>
+                        <td><img src="/WebLab4/images/N10002 戴维斯的梦.jpg" alt=""></td>
+                        <td>N10002</td>
+                        <td>戴维斯的梦</td>
+                        <td>9999</td>
+                        <td>800</td>
+                    </tr>
+                    <tr>
+                        <td><img src="/WebLab4/images/R10005 藤蔓.jpg" alt=""></td>
+                        <td>R10005</td>
+                        <td>藤蔓</td>
+                        <td>5999</td>
+                        <td>700</td>
+                    </tr>
+                </table>
+		</main>
+		<footer>
+			<!--5、在网页的页脚区域创建段落内容为由“班级、学号、姓名”等构成的版权信息的） -->
+			<p>班级：软工22102 学号：202214060214 姓名：张静 &copy;珠宝商城版权所有
+            </p>
+		</footer>
+	</body>
+</html>

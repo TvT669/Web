@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>网页标签选项卡切换效果</title>
+		<style type="text/css">
+			*{
+				padding: 0;
+				margin: 0;
+			}
+			/*5、设置选项卡区域的样式:设置区域的宽度为相对网页窗口宽度的合适百分比；
+			设置外边距（垂直方向设置合适的外边距且水平方向居中对齐）*/
+			#cardcontainer{
+				width: 80%;
+				margin: 2px auto;
+			}
+			
+
+            
+			/*6、设置选项卡列表区域的每个列表项的样式:设置浮动定位让列表项横向排列；
+			设置去掉所有无序列表项的项目符号；设置区域的宽度为平均分配选项卡区域的宽度；
+			设置合适的区域高度(大于40px)；添加合适的背景颜色；文字字体(加粗 合适大小 隶书)；
+			设置文字居中对齐；设置行高与高度一致；设置合适粗细、单实线、合适颜色的上边框 ；
+			设置下边框与上边框一样样式*/
+			#id1 li{
+                list-style-type: none;
+                float: left;
+                width: 25%;
+                height: 50px;
+                line-height: 50px;
+                background-color: lightblue;
+                text-align: center;
+                border-top: 2px solid #333;
+                border-bottom: 2px solid #333;
+                font:bold 16px 隶书;
+			}
+			/*7、设置选项卡列表区域的当前列表项的样式:设置取消下边框；
+			设置合适的背景颜色；设置合适的文字颜色；设置文字大小大于原来文字大小*/
+			#id1 .curr{
+				border-bottom: none;
+				background-color: lightpink;
+				color: aqua;
+				font-size: 20px;
+			}
+
+
+			/*8、设置选项卡内容区域的样式:设置区域的宽度与其父元素选项卡区域宽度一致；
+			设置清除前面设置的浮动；设置相对定位设置；合适高度*/
+			#id2{
+				width: 100%;
+				clear:both;
+				position: relative;
+				height: 3500px;
+			}
+
+
+
+			/*9、设置选项卡内容区域的每个内容区域的样式:设置区域的宽度相对整个选项卡内容区域的合适百分比；
+			设置合适高度；设置合适宽度、单实线、灰色的边框；设置合适的内边距(上下相同、右左相同)；
+			设置合适的外边距(上下相同、右左相同)；设置内容溢出自动添加滚动条；
+			设置水平垂直方向没有偏移的阴影、合适模糊距离（大于5px）、灰色的盒阴影；
+			设置绝对定位；设置透明度为全透明或层叠层级小于或等于0；*/
+			 #id2 div{
+				width: 90%;
+				height:2000px;
+				border: 2px solid grey;
+				padding: 22px;
+				margin: 12px 0px;
+				overflow: auto ;
+				box-shadow: 0px 0px 5px grey;
+				position: absolute;
+				opacity: 0;
+				z-index: 0;
+				
+			 }
+
+
+
+			/*10、设置选项卡内容区域的当前内容区域的样式:设置取消上边框；
+			设置背景颜色与选项卡列表区域的当前列表项背景颜色一致；
+			设置透明度为全不透明或层叠层级为大于0；*/
+			#id2 .curr{
+				border-top: none;
+				background-color: lightpink;
+				opacity: 1;
+				z-index: 1;
+			}
+
+
+			/*11、设置段落的样式:设置区域的宽度相对内容区域的合适百分比；
+			设置合适的文字字体大小(至少大于14px)；设置合适的外边距(上下相同、右左相同)；*/
+             p{
+				width: 60%;
+				font-size: 16px;
+				margin: 3px 6px;
+			}
+
+
+			/*12、设置标题段落的样式:文字字体(加粗 合适大小(大于段落和作者段落中的字体大小) 楷体)；
+			设置文字居中对齐显示；设置文字合适颜色；*/
+			#cardcontainer .title{
+				font: bold 20px 楷体;
+				text-align: center;
+				color: grey ;
+			}
+
+			
+
+
+			/*13、设置作者段落的样式:文字字体(加粗 合适大小（小于标题段落,大于段落中的字体大小） 黑体)；
+			设置文字右对齐显示；设置合适的文字颜色；*/
+			#cardcontainer .auther{
+				font: bold 17px 黑体;
+				text-align: right;
+				color: grey;
+			}
+			
+
+			/*14、设置页脚的样式:文字字体(加粗 合适大小 楷体)；
+			设置文字居中对齐显示；设置文字合适颜色；*/
+			footer{
+				font:bold 20px 楷体;
+				text-align: center;
+				color: black;
+			}
+
+
+		</style>
+</head>
+	<body>
+		<div id="cardcontainer">
+			<!--1、在选项卡区域中先创建一个div选项卡列表区域，并设置id属性值-->
+			<div id="id1">
+            
+				<!--1、在选项卡列表区域中创建一个4个列表项的无序列表，每个列表项为图中的4个文本
+				且并设置第一个列表项的class属性值为"curr"-->
+				<ul>
+                    <li class="curr"> 曲院幽荷</li>
+                    <li>杨柳垂堤</li>
+                    <li>夕阳断桥</li>
+                    <li>翠绿竹林</li>
+                </ul>
+			</div> 
+
+			<!--2、在选项卡区域中再创建一个div选项卡内容区域，并设置id属性值-->
+            <div id="id2">
+                <div class="curr">
+                    <img src="/WebLab6/images/01.jpg">
+					<p class="title">曲院风荷</p>
+					<p class="auther">清 · 陈璨</p>
+                <p>六月荷花香满湖，</p>
+                   <p>红衣绿扇映清波。</p>
+                   <p>木兰舟上如花女，</p>
+                   <p>采得莲房爱子多。</p>
+                </div>
+                <div>
+					<img src="/WebLab6/images/02.jpg">
+					<p class="title">沁园春·杨柳垂堤</p>
+					<p class="auther">清  ·  陆求可</p>
+                <p>杨柳垂堤，葡萄上架，春满南塘。</p>
+                    <p>却和风习习，轻云漠漠，知时灵雨，乱下高唐。</p>
+                      <p>斗草王孙，踏青娇女，湿透花毡对夕阳。</p>
+                     <p>开筵处，有蜻蜓上下，燕子颠狂。</p>
+                    <p>溪头双宿鸳鸯。喜春涨、平添近晓窗。</p>
+                    <p>更园林无数，树头红冷，枝间白嫩，洗尽残妆。</p>
+                    <p>好把金壶，早沽美酒，雨后看春上野航。</p>
+                    <p>偏成对，是蝶儿轻粉，蜂子新黄。</p>
+				</div>
+                <div>
+					<img src="/WebLab6/images/03.jpg">
+					<p class="title">卜算子·咏梅</p>
+					<p class="auther"> 宋  ·  陆游</p>
+                    <p>驿外断桥边，寂寞开无主。</p>
+                    <p>已是黄昏独自愁，更著风和雨。</p>
+                    <p>无意苦争春，一任群芳妒。</p>
+                    <p>零落成泥碾作尘，只有香如故。</p>
+				</div>
+                <div>
+					<img src="/WebLab6/images/04.jpg">
+					<p class="title">竹林的翠绿</p>
+					<p class="auther"> 现代·  梧桐山客</p>
+                    <p>竹子的翠绿是与生俱来的，</p>
+                    <p>似乎一辈子都没变色过，严冬里也如此。</p>
+                    <p>我从小就在竹林里玩耍长大，</p>
+                    <p>竹子的翠绿已染遍我的灵魂，沁进我的眼眸。</p>
+                    <p>我的眼晴里苍翠欲滴，</p>
+                    <p>所以目光所及，</p>
+                    <p>我将枯草描绿，将池塘染绿，</p>
+                    <p>让枯萎光秃的树枝缀上嫩嫩的绿芽。</p>
+                    <p>在睡梦中我居然目光如炬，</p>
+                    <p>还把祖国大片大片的荒漠喷绿，喷绿！</p>
+                    <p>我期望绿色贯穿四季，翠绿回归一切该有的植物，</p>
+                    <p>要让世界一片翠绿，当然，人的良心除外。</p>
+				</div>
+			</div>
+
+            
+			
+				<!--2、在选项卡内容区域中创建一个4个div内容区域，且并设置第一个
+				div内容区域的class属性值为"curr"-->
+				
+                      <!--3、在每个div内容区域中分别创建一个img标签添加图片;再创建p标签添加文章标题，
+						并设置class属性值为‘title’;再创建p标签添加文章作者，并设置class属性值为‘auther’;
+						最后创建若干p标签添加文章内容
+					  -->
+						
+
+			
+                 
+		</div>
+
+		<footer>
+			<!-- 4、在网页的页脚区域内容为由“班级：…… 学号：…… 姓名：……”等构成的版权信息 -->
+            <p>班级：软工22102 学号：202214060214 姓名：张静 &copy;网页中选项卡切换版权所有</p>
+
+		</footer>
+ <script>
+        window.onload = function() {
+        	/*按Id查找HTML元素：var elem=document.getElementById("id")
+        	  按标签名查找HTML元素：var elems=parent.getElementsByTagName("tag");
+        	 */
+
+			/*15、按id查找选项卡列表div区域元素赋值给cardDiv1变量*/
+           var cardDiv1=document.getElementById("id1");
+
+        	/*16、查找cardDiv1变量所关联的元素下的标签名为为'li'所有子元素，将其赋值给cardLi变量*/
+            var cardLi=cardDiv1.getElementsByTagName("li");
+
+			/*17、按id查找选项卡内容div区域元素赋值给cardDiv2变量*/
+			var cardDiv2=document.getElementById("id2");
+
+			/*18、查找cardDiv2变量所关联的元素下的标签名为'div'所有子元素，将其赋值给cardCon变量*/
+        	var cardCon=cardDiv2.getElementsByTagName("div");
+
+
+			for (var i = 0; i < cardLi.length; i++) {
+                cardLi[i].index = i;
+        		/*19、将cardLi[i]所关联的元素与鼠标悬停事件动态绑定，
+        		并在指定的事件处理函数中调用show函数，且传递参数当前对象的index值，
+        		*/
+                cardLi[i].onmouseover = function(){
+					show(this.index);
+				}
+
+
+            }
+            function show(index) {
+
+                for (var j = 0; j < cardLi.length; j++) {
+        			/*20、如果j==index，则cardLi[j]所关联元素的className属性值修改为"curr",
+        			同样cardCon[j]所关联对象的className属性值修改为"curr"；
+        			否则，以上两个对象所关联元素的className属性值修改为""。
+        			*/
+					if(j==index){
+						cardLi[j].className="curr";
+						cardCon[j].className="curr";
+					}
+					else{
+						cardLi[j].className="";
+						cardCon[j].className="";
+					}
+                    
+
+
+                }
+            }
+        }
+        </script>
+
+
+	</body>
+</html>

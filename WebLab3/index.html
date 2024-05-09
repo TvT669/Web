@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>读书网-在线读书</title>
+    <style type="text/css">
+        * { margin: 0px;
+            padding: 0px;
+			text-decoration: none;
+            list-style: none;
+
+        }
+        #top{
+            width: 100%;
+            height: 50px;
+            background-color:#ededed ;
+            color:#5b5657 ;
+            line-height:50px ;
+            font-size:20px ;
+            position: fixed;
+            top: 0px;
+            left: 0px;
+        }
+        #left{
+            margin-left:150px ;
+            float: left;
+        }
+        #right{
+            margin-right: 100px;
+            float: right;
+        }
+		#top a{
+             color: #5ea5a4;
+        }
+        #container{
+            width: 95%;
+            margin: 50px auto;
+        }
+        header img{
+            width: 100%;
+        }	 
+        nav ul li{
+            width: 12.5%;
+            height: 50px;
+            background-color: #5ea5a4;
+            border-bottom: 3px solid #565152;
+            float: left;
+        }
+        nav a{
+            width: 100%;
+            line-height: 50px;
+            color: #dedede;
+            font: bold 20px 楷体;
+            display: inline-block;
+            text-align: center;
+        }
+        /*使用nav a选择器，设置导航区域中无序列表列表项目的超链接文字如下属性:宽度与父元素列表项宽度相等、
+		行度为“50px”、文本颜色为“#dedede”、字体(font)为“bold 20px 楷体”、
+		显示类型(display)为“inline-block”、文本水平对齐方式为“center” 。*/
+		
+    	main{
+			width: 100%;
+		}
+        aside{
+            width: 18%;
+            margin-top: 10px;
+            border-top:2px solid #5ea5a4 ;
+            float: left;
+        }
+		aside ul{
+			background-color: #ededed;
+			margin-top: 2px;
+		}
+        aside ul li{
+            list-style: url(WebLab3/images/bk.png);
+           list-style-position:inside ;
+           padding-left:50px ;
+           border:1px solid #ccc ;
+           height: 53px;
+        }
+        aside a{
+            line-height: 50px;
+            color:#5ea5a4 ;
+            font:bold 16px 微软雅黑 ;
+            padding-left:20px ;
+        }
+        section{
+            width: 80%;
+            float: right;
+            border-top:2px solid #5ea5a4 ;
+            margin-top:10px ;
+           
+        }
+        	/*23、使用section选择器，设置主体内容区域如下属性:宽度为父元素主体区域的”80%”、
+		浮动定位为“right”、上边框为“2px solid #5ea5a4”、上外边距为“10px” 。*/		
+		section img{
+			margin-top: 2px;
+			width: 100%;
+		}
+        section #titlenew {
+            line-height: 40px;
+        }
+        .bookslist ul{
+            border:2px solid #aaa ;
+            height: 350px;
+        }
+        .bookslist ul li{
+            width: 48%;
+            padding:10px 9px ;
+            border-bottom:1px solid #aaa;
+            float: left;
+        }
+        .bookslist ul li div{
+            float: left;
+        }
+        .bookslist a{
+            color: #342d28;
+            font: bold 16px 微软雅黑;
+        }
+        .bookslist p{
+            color: #919191;
+            font-size: 14px;
+        }
+		footer{
+            width: 100%;
+            margin-top: 10px;
+            background-color: #ededed;
+            border-top: 2px solid #5ea5a4;
+            text-align: center;
+            color: #919191;
+            font:bold 15px 宋体 ;
+
+        }
+        footer ul{
+            width: 400px;
+            margin: 0 auto;
+        }
+        footer ul li{
+            float: left;
+            margin-left:30px ;
+        }
+        footer a{
+            color:#5ea5a4 ;
+            line-height: 40px;
+        }
+        		/*32、使用footer a选择器，设置页脚区域中无序列表列表项中超链接文字如下属性:
+		文本颜色为“#5ea5a4”、行高为“40px”。*/
+        footer p{
+            clear: both;
+            line-height: 30px;
+        }
+
+    </style>
+</head>
+<body>
+	<div id="top" >  
+<div id="left">读书好，好读书，读好书！</div>
+<div id="right">
+    <a href="#">注册</a>|<a href="#">登录</a>
+</div>
+	</div>
+
+	<div id="container" >   
+		<header>
+			<!--3、在header区域添加图片，图片地址：WebLab3/images/top.png-->
+			<img src="/WebLab3/images/top.png" alt="">
+		</header>
+		<nav>
+			<ul>
+           <li><a href="#">首页</a></li> 
+            <li><a href="#">资讯</a></li>
+            <li><a href="#">国学/古籍</a></li>
+            <li><a href="#">网络小说</a></li>
+            <li><a href="#">电子书</a></li>
+            <li><a href="#">在线读书</a></li>
+            <li><a href="#">出版图书</a></li>
+            <li><a href="#">读书导航</a></li></ul>
+
+		</nav>
+		<main>
+			<aside>
+                <ul>
+                    <li><a href="#">文学艺术</a></li>
+                    <li><a href="#">社会科学</a></li>
+                    <li><a href="#">历史传记</a></li>
+                    <li><a href="#">两性情感</a></li>
+                    <li><a href="#">生活时尚 </a></li>
+                    <li><a href="#">小说作品</a></li>
+                    <li><a href="#">亲子少儿</a></li>
+                    <li><a href="#">经济管理 </a></li>
+                    <li><a href="#">计算机/网络</a></li>
+                    <li><a href="#">科学技术</a></li>
+                </ul>
+			</aside >
+			<section>
+				<img src="/WebLab3/images/yuedu.jpg"/>
+				<p id="titlenew">最新更新</p>
+				<div class="bookslist">
+					<ul>
+						<li>
+							<div><img src="/WebLab3/images/pic_1.jpg"/> </div>
+							<h3><a href="#">多少黑名单 曾互道晚安</a></h3>
+							<p>风茕子 著</p>
+							<p>这是一本打破你三观的重口味麻辣情感故事集，男人看了会沉默、女人看了会清醒…</p>
+						</li>
+						<li>
+                            <div><img src="/WebLab3/images/pic_2.jpg"/> </div>
+							<h3><a href="#">饮食滋味</a></h3>
+							<p>徐文兵 著</p>
+							<p>我们这一代中国人，饮食结构和习惯发生了巨大变化，流行摧毁了传统，营养和元…</p>
+						</li>
+						<li>
+							<div><img src="/WebLab3/images/pic_3.jpg"/> </div>
+							<h3><a href="#">反脆弱：做一个内心强大的人</a></h3>
+							<p>壹心理 著</p>
+							<p>生活中，你是不是常常觉得世界不公平，“为什么我那么努力，却还是一事无成”…</p>
+
+						</li>
+						<li>
+                            <div><img src="/WebLab3/images/pic_4.jpg"/> </div>
+							<h3><a href="#">长长的路 我们慢慢走</a></h3>
+							<p>余光中 著</p>
+							<p>本书精选余光中先生散文36篇，包括游记见闻、感情经历、生活智慧、人情世故、…</p>
+							
+						</li>
+					</ul>
+				</div>
+			</section>
+		</main>
+		<div style="clear:both;"></div>
+		<footer>
+                <ul>
+                    <li><a href="#">读书目录</a></li>
+                    <li><a href="#">关于读书</a></li>
+                    <li><a href="#">免责声明</a></li>
+                    <li><a href="#">联系我们</a></li>
+                </ul>
+                <p>读书网 www.dushu.com 班级：软工22101学号：202214060214姓名：张静&copy;版权所有</p>
+                <p>湘ICP备0000000号-2 <img src="/WebLab3/images/beian.png" alt="">湘公网安备 00000000000000号</p>
+			
+
+			
+			<!--11、在footer区域还创建一个段落p;
+			 段落的内容分别为备案信息：湘ICP备0000000号-2 湘公网安备 00000000000000号
+			 且在备案信息的中间添加备案图片，图片地址：WebLab3/images/beian.png-->
+			
+            
+		</footer>
+	</div>
+</body>
+</html>

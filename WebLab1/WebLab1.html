@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <!--使用<title>标签为网页添加网页标题“世界地球日”-->
+    <title>世界地球日</title>
+</head>
+<body>
+<header class="flex">
+    <!--在网页页眉区域使用<img>标签添加图片，图片地址src为：images/headerimg.jpg，
+	宽度width和高度height分别为：800,150
+	-->
+   
+    <!--使用<a>标签为当前img元素设置书签，书签名id为“top””-->
+        <a id="top"> <img src="images/headerimg.jpg"  width="800"  height="150"> </a>
+    
+	
+</header>
+<hr>
+
+<nav class="flex">
+    <!--在导航区域使用<ul>标签创建一个无序列表，并每个列表项的内容为“首页”、“目录”、“关于我们”、“联系我们”的超链接。
+    “首页”的链接地址为“index.html”，
+    “目录”的链接地址为“list.html”，
+    “关于我们”的链接地址为“#”
+    “联系我们”的链接地址为“#contact-us” 
+	-->
+    <ul>
+        <li><a href="index.html">首页</a></li> 
+        <li><a href="list.html">目录</a>
+        </li>
+        <li><a href="#">关于我们</a>
+        </li>
+        <li><a href="#contact-us">联系我们</a>
+        </li>
+    </ul>
+    
+
+</nav>
+<hr>
+<main class="flex">
+    <section>
+        <!--在主体区域中的第一内容区域使用<h3>创建一个内容为“地球日”三级标题 -->
+       <h3>地球日</h3>
+        <article>
+            <!--在文章区域中使用<img>标签为文章内容配上图片，
+			图片地址src为：images/greenery.png，对齐方式align为：left|bottom
+			-->
+           <img src="images/greenery.png" align="left|bottom">
+            &nbsp;&nbsp;&nbsp;&nbsp;每年的4月22日，是一个专为世界环境保护而设立的节日，旨在提高民众对于现有环境问题的意识，并动员民众参与到环保运动中，通过绿色低碳生活，改善地球的整体环境。地球日由盖洛德·尼尔森和丹尼斯·海斯于1970年发起。现今，地球日的庆祝活动已发展至全球192个国家，每年有超过10亿人参与其中，使其成为世界上最大的民间环保节日。中国从20世纪90年代起，每年都会在4月22日举办世界地球日活动。
+            <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;1970年4月22日的地球日活动，是人类有史以来第一次规模宏大的群众地球日，作为人类现代环保运动的开端，它推动了西方国家环境法规的建立。
+        </article>
+    </section>
+	<section>
+        <!--在主体区域中的第二内容区域使用<h3>创建一个内容为“2020年世界地球日视频”三级标题 -->
+		<h3>2020年世界地球日视频</h3>
+        <!--在主体区域中的第二内容区域使用<video>标签添加视频，高度属性height为：200，并显示控件和自动播放”-->
+
+              <!--在<video>标签中使用<source>标签添加子元素，视频地址src为：medias/世界地球日.mp4，视频类型type="video/mp4" -->
+                <video height="200" controls = "controls" autoplay = "autoplay">
+                    <source src="medias/世界地球日.mp4" type="video/mp4">
+                </video>
+		
+       
+        <!--在主体区域中的第二内容区域使用<h4>创建一个内容为“点击这里下载视频：”和“下载视频”超链接
+         “下载视频”超链接的目标地址href为：medias/worldearthday.rar
+		-->
+        <h4>点击这里下载视频：<a href="medias/worldearthday.rar">下载视频</a></h4>
+
+       
+	</section>
+	
+
+    <aside id="sidebar1">
+        <!--在主体区域中的第一边栏区域使用<h3>创建一个内容为“目录”三级标题 -->
+        <h3>目录</h3>
+        <!--在主体区域中的第一边栏区域使用<ul>创建一个项目符号为正方形的无序列表
+        每个列表项是内容分别为“活动影响”、“创始人”、“历年主题”、“历年国内活动”的超链接，链接目标地址href都为“#”，       
+		--><ul type="square">
+            
+                    <li><a href = "#">活动影响</a></li>
+                    <li><a href = "#">创始人</a></li>
+                    <li><a href = "#">历年主题</a></li>
+                    <li><a href = "#">历年国内活动</a></li>
+
+        </ul>
+        
+		
+		
+    </aside>
+
+    <aside id="sidebar2">
+        <!--在主体区域中的第一边栏区域使用<h3>创建一个内容为“做什么”三级标题 -->
+        <h3>做什么</h3>
+        <!--在主体区域中的第二边栏区域使用<ul>创建一个项目符号为指定图片的的无序列表
+        指定项目符号的图片由属性style设置，属性值：list-style-image:url(images/arrow.gif)        
+        每个列表项的内容分别为“倡导低碳生活”、“从身边的小事做起”、“从节约资源做起”、“科学发展”、“公众参与”的超链接，
+         链接目标地址href为“#”。
+		-->
+        <ul style="list-style-image:url(images/arrow.gif)">
+            <li><a href = "#">倡导低碳生活</a></li>
+            <li><a href = "#">从身边的小事做起</a></li>
+            <li><a href = "#">从节约资源做起</a></li>
+            <li><a href = "#">科学发展</a></li>
+            <li><a href = "#">公众参与</a></li>
+
+        </ul>
+        
+		
+		
+    </aside>
+	
+</main>
+
+<hr>
+<footer class="flex">
+	<div id="footer-1">
+       <!--在页脚区域中的第一div区域使用<h3>创建一个内容为“联系我们”三级标题
+        并使用<a>标签为该<h3>元素来设置书签，书签名id:contact-us
+	   -->
+	
+       <a id="contact-us"><h3>联系我们</h3></a>
+       <!--在页脚区域中的第一div区域使用<dl>创建一个定义列表
+         定义列表的每一个列表项的标题和内容分别为：“电话：” 、“400-111-333”、
+         “地址：”、“常德市洞庭大道”、“邮编：”、“415000”
+		-->
+    
+            <dl>
+                <dt>电话：</dt>
+                <dd>400-111-333</dd>
+                <dt>地址：</dt>
+                <dd>常德市洞庭大道</dd>
+                <dt>邮编：</dt>
+                <dd>415000</dd>
+    
+            </dl>
+    
+	   
+	   
+       <!--在页脚区域中的第一div区域使用<h3>创建一个内容为“返回顶部”超链接的三级标题
+        超链接的目标地址href:“#top”-->
+	   <h3><a href="#top">返回顶部</a></h3>
+	   
+	</div>
+    <div id="footer-2">
+        <!--在页脚区域中的第二div区域使用<h3>创建一个内容为由班级、学号和姓名组成的版权信息的三级标题
+        并设置对齐方式align:“center”-->	
+       <h3 align="center">班级：软工22102 学号：202214060214 姓名：张静 &copy;版权所有
+    </h3>	
+        
+        
+    </div>
+</footer>
+</body>
+</html>
+

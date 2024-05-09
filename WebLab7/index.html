@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<!--1、引用WebLab7目录css子目录下的“loginstyle.css”外部样式文件-->
+        <link rel="stylesheet" href="/WebLab7/css/loginstyle.css">
+		<!--2、引用WebLab7目录js子目录下的“loginscript.js” 外部脚本文件-->
+        <script type="text/javascript" src="/WebLab7/js/loginscript.js"></script>
+
+	</head>
+	<body>
+		<header>
+			<!--3、在页眉区域中添加WebLab7目录images子目录下的logo.png图片元素-->
+            <img src="/WebLab7/images/logo.png">
+
+			<!--3、在页眉区域中添加无序列表、列表项为“注册”和“登录” -->
+            <ul>
+                <li>登录</li>
+                <li>注册</li>
+            </ul>
+
+		</header>
+
+		<div id="userarea">
+			<div id="regist">
+				<label >用户名：<input type="text" id="registUserName"   /></label>
+				<br>
+				<label >密码：<input type="password" id="registUserPass"   /></label>
+				<br>
+				<label >确认密码：<input type="password" id="conformPass"  /></label>
+				<br>
+				<input type="button"  class="button" value="注 册" onclick="regist()"/>
+			</div>
+
+			<div id="login">
+				<!--4、在用户注册区域仿照注册区域的格式添加用户名输入区域；
+				且设置id属性值为"loginUserName"-->
+                <label >用户名：<input type="text" id="loginUserName"   /></label>
+				<br>
+
+				<!--4、在用户登录区域仿照注册区域的格式添加密码输入区域；
+				且设置id属性值为"loginUserPass"-->
+                <label >密码：<input type="password" id="loginUserPass"   /></label>
+				<br>
+				<!--4、在用户登录区域仿照注册区域的格式添加验证码输入区域；
+				input元素前面添加一个div元素，且设置div元素id属性值为"verifCode"、onclick事件句柄关联的函数为"createVerifCode()"
+				且设置input元素的type属性为"text"、id属性值为"userverifCode"-->
+                <label>
+                    <div id="verifCode" onclick="createVerifCode()"><input type="text" id="userverifCode"/>
+                    </div>
+                </label>
+        
+                
+				<!--4、在用户登录区域仿照注册区域的格式添加登录按钮；且设置input元素type属性为"button"、
+				value属性值为"登录"、class属性值为"button"、onclick事件句柄关联的函数为"login()" -->
+                <input type="button"  class="button" value="登录" onclick="login()"/>
+           
+
+			</div>
+
+		</div>
+		<footer>
+			<!-- 5、在网页的页脚区域内容为由“班级：…… 学号：…… 姓名：……”等构成的版权信息 -->
+            <p>用户登录界面版权所有&copy;班级：软工22102学号：202214060214 姓名：张静</p>
+		</footer>	
+	</body>
+</html>

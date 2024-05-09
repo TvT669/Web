@@ -1,0 +1,175 @@
+/* 5、设置整体的样式:外边距和内边距都为零；去掉所有无序列表项的项目符号 */
+*{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+/* 6、设置容器区域的样式:设置区域的宽度与网页窗口一致；设置合适的区域高度；添加背景图像；
+	设置背景图片(bg.jpg)覆盖整个容器区域；设置合适粗细、单实线、合适颜色的上、下边框，并设置一定模糊距离、黑色的盒阴影) */
+	.container{
+		width: 100%;
+		height: 900px;
+		background-image: url('/WebLab5/images/bg.jpg');
+		background-size: cover;
+		border-top: 5px solid #444;
+		border-bottom: 5px solid #444;
+		box-shadow: 0px 0px 5px #000;
+	}
+
+
+
+/*7、设置轮播区域的样式:区域的合适宽度（图片宽度+图片左右两边边框宽度+图片左右两边外边距）；
+内容溢出隐藏；轮播区域在容器区域中水平居中 */
+.lunbo{
+	width: 789px;
+	overflow: hidden;
+	margin: 0 auto;
+}
+
+/* 8、定义动画，动画的名称自由命名，动画中的各个关键帧为：
+0%-15%      向左移动0张图片区域的宽度 显示第一张图片
+16%-31%     向左移动1张图片区域的宽度 显示第二张图片
+32%-47%     向左移动2张图片区域的宽度 显示第三张图片
+48%-63%     向左移动3张图片区域的宽度 显示第四张图片
+64%-79%     向左移动4张图片区域的宽度 显示第五张图片
+80%-95%     向左移动5张图片区域的宽度 显示第六张图片
+96%-100%    向左移动6张图片区域的宽度 显示第七张图片
+使用transform:translateX(-x)实施向左移动
+ */
+@keyframes changeImg{
+	0%{
+		transform: translateX(0);
+	}
+	15%{
+		transform: translateX(0);
+	}
+	16%{
+		transform: translateX(-789px);
+	}
+	31%{
+		transform: translateX(-789px);
+	}
+	32%{
+		transform: translateX(-1578px);
+	}
+	47%{
+		transform: translateX(-1578px);
+	}
+	48%{
+		transform: translateX(-2367px);
+	}
+	63%{
+		transform: translateX(-2367px);
+	}
+	64%{
+		transform: translateX(-3156px);
+	}
+	79%{
+		transform: translateX(-3156px);
+	}
+	80%{
+		transform: translateX(-3945px);
+	}
+	95%{
+		transform: translateX(-3945px);
+	}
+	96%{
+		transform: translateX(-4734px);
+	}
+	100%{
+		transform: translateX(-4734px);
+	}
+}
+
+/* 9、设置轮播区域中的无序列表的样式:合适宽度（7*轮播区域的宽度）；
+	调用动画(后面定义的动画名称、自由设置动画持续时间、缓进缓出、无限次播放) */
+.lunbo ul{
+	width: 5523px;
+	animation: changeImg 10s ease-in-out infinite;
+
+}
+
+/* 10、设置轮播区域中的无序列表项的样式:设置浮动定位让列表项横向排列 */
+.lunbo ul li{
+	float: left;
+}
+
+
+
+/* 11、设置轮播区域中的无序列表项中图片的样式:设置合适的外边距(包括上、右、下、左，且左、右两边相等)；
+ 设置合适的边框(宽度、单实线、颜色全透明)；设置4个角都为合适半径的圆角边框；
+ 设置合适模糊距离(小于等于左右外边距)、合适颜色的盒阴影 */
+.lunbo ul li img{
+	margin: 35px 7px 10px 7px;
+	border: 8px solid transparent;
+	border-radius: 4px;	
+	box-shadow: 0px 0px 7px  #222;
+
+
+
+}
+
+/* 12、设置过渡效果区域的样式:区域的合适宽度（图片宽度+边框+其他外边距等）；
+	清除前面设置的浮动；过渡效果区域在容器区域中水平居中 */
+	.guodu{
+		width: 820px;
+		clear: both;
+		margin: -380px auto;
+
+	}
+
+
+/* 13、设置过渡效果区域中无序列表项的样式:设置浮动定位让列表项横向排列 */
+.guodu ul li{
+	float: left;
+
+}
+
+
+/* 14、设置过渡效果区域中无序列表的偶数列表项的样式:设置顺时针旋转合适角度 */
+.guodu ul li:nth-child(even){
+	transform: rotate(30deg);
+}
+
+/* 14、设置过渡效果区域中的无序奇数数列表项的样式:设置逆时针旋转合适角度 */
+.guodu ul li:nth-child(odd){
+	transform: rotate(-30deg);
+}
+
+
+
+/* 15、设置过渡效果区域中无序列表的列表项中图片的样式:设置合适的外边距(包括上、右、下、左，且左、右两边相等)
+ 设置合适宽度、单实线、白色的边框；设置合适的透明度；
+ 设置合适水平、垂直阴影距离、模糊距离、合适颜色的盒阴影；
+  设置图片变换的过渡效果（所有变换的属性、合适的持续时间，缓进缓出）
+ */
+ .guodu ul li img{
+	margin: 30px 8px 20px 8px;
+ 	box-shadow:0px 0px 7px #222;
+ 	border: 8px solid white;
+ 	border-radius:4px;
+    opacity: 0.5;
+	transition:all 1s ease-in-out;
+ }
+ 
+
+/* 16、设置过渡效果区域中无序列表的列表项中图片鼠标悬停时的样式:
+  设置透明度为全不透明；设置图片放大合适的倍数； 
+ */
+
+ .guodu ul li img:hover{
+	opacity: 1;
+	transform: scale(1.5);
+	
+
+ }
+
+
+/* 17、设置页脚区域的样式:合适上外边距、文字居中显示、文字字体(粗细 大小 字体)、合适的文字颜色 */
+footer{
+	margin-top:20px;
+	text-align: center;
+	font: bold 30px 楷体;
+	color: aqua;
+}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>酷炫的相册</title>
+		<!--1、创建外部样式文件:WebLab5目录下lab5style.css的引用 -->
+        <link rel="stylesheet" href="/WebLab5/lab5style.css">
+		
+
+	</head>
+	<body>		
+		<div  class="container">
+			<!--2、在container容器中先创建一个div轮播区域 -->			
+				<!--2、在该轮播区域中创建一个7个列表项的无序列表,每个列表项内容为图片元素，
+				7个图片元素的文件名WebLab5/images目录下的为1.jpg-6.jpg及1.jpg-->
+				<div class="lunbo">
+					<ul><li><img src="/WebLab5/images/1.jpg" ></li>
+					<li><img src="/WebLab5/images/2.jpg"></li>
+				<li><img src="/WebLab5/images/3.jpg" ></li>
+				<li><img src="/WebLab5/images/4.jpg" ></li>
+				<li><img src="/WebLab5/images/5.jpg" ></li>
+				<li><img src="/WebLab5/images/6.jpg" ></li>
+                <li><img src="/WebLab5/images/1.jpg" ></li>
+			</ul>
+				</div>
+		        
+
+
+			<!--3、在container容器中再创建一个div过渡效果区域 -->		    
+				<!--3、在该过渡效果区域中创建一个6个列表项的无序列表,每个列表项内容为图片元素，
+				6个图片元素的文件名WebLab5/images/thumbs目录下的为1.jpg-6.jpg-->
+				<div class="guodu">
+					<ul><li><img src="/WebLab5/images/thumbs/1.jpg"></li>
+						<li><img src="/WebLab5/images/thumbs/2.jpg"></li>
+						<li><img src="/WebLab5/images/thumbs/3.jpg"></li>
+						<li><img src="/WebLab5/images/thumbs/4.jpg"></li>
+						<li><img src="/WebLab5/images/thumbs/5.jpg"></li>
+						<li><img src="/WebLab5/images/thumbs/6.jpg"></li>
+					</ul>
+				</div>
+                
+		       
+		</div>
+		<footer>
+			<!-- 4、在网页的页脚区域内容为由“班级：…… 学号：…… 姓名：……”等构成的版权信息 -->
+			<p>班级：软工22102 学号：202214060214 姓名：张静 &copy;酷炫的相册版权所有</p>
+		</footer>
+	</body>
+</html>
